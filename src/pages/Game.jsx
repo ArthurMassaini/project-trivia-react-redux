@@ -123,7 +123,7 @@ const Game = (props) => {
     };
   }, [time]);
 
-  useEffect(() => () => {
+  useEffect(() => {
     score = 0;
     sum = 0;
   }, []);
@@ -145,9 +145,9 @@ const Game = (props) => {
           value="correct"
           type="button"
           data-testid="correct-answer"
-          className={ color.style1 }
-          onClick={ handleClickAnswer }
-          disabled={ isEnable }
+          className={color.style1}
+          onClick={handleClickAnswer}
+          disabled={isEnable}
         >
           {results[counter].correct_answer}
         </button>
@@ -156,12 +156,12 @@ const Game = (props) => {
         {results[counter].incorrect_answers.map((answer, index) => (
           <button
             value="incorrect"
-            key={ answer }
+            key={answer}
             type="button"
-            data-testid={ `wrong-answer-${index}` }
-            className={ color.style2 }
-            onClick={ handleClickAnswer }
-            disabled={ isEnable }
+            data-testid={`wrong-answer-${index}`}
+            className={color.style2}
+            onClick={handleClickAnswer}
+            disabled={isEnable}
           >
             {answer}
           </button>
@@ -169,7 +169,7 @@ const Game = (props) => {
       </div>
       <div>
         {showButton ? (
-          <button type="button" data-testid="btn-next" onClick={ handleQuestion }>
+          <button type="button" data-testid="btn-next" onClick={handleQuestion}>
             Próxima
           </button>
         ) : (
